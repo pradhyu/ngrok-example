@@ -1,3 +1,4 @@
+
 # use ngrok https://www.quora.com/Can-I-host-my-own-website-with-my-own-computer-How-would-I-go-about-doing-that
 # ./ngrok http 5000
 # https://dashboard.ngrok.com/get-started
@@ -6,7 +7,7 @@ app = Flask(__name__)
 app.debug = True
 @app.route('/')
 def main():
-    with open('product.json', 'r') as myfile:
+    with open('products.json', 'r') as myfile:
         data = myfile.read()
     return data
 if __name__ == '__main__':
